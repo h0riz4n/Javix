@@ -4,6 +4,8 @@ const resetBtn = document.getElementById('reload');
 export const aiPlayer = 'O'; 
 export const huPlayer = 'X';
 
+const mainURI = "";
+
 export class GameEngine {
 
     constructor(size = 3) {
@@ -52,17 +54,27 @@ export class GameEngine {
               
                 if (this.checkWinner(this.board, huPlayer)) {
                     this.win('Вы выиграли', 'Вам начислено 10 очков');
+                    this.addScore(10);
                     return;
                 }
 
                 if (this.turnCount >= this.limit) {
                     this.win('Ничья', 'Вам начислено 5 очков');
+                    this.addScore(5);
                     return;
                 }
               
                 this.makeAiTurn();
             }
         }
+    }
+
+    async addScore(num) {
+        const url = new URL(window.location.href);
+        const id = url.searchParams.get('id') ?? '0';
+        axios.get(
+            `${mainURI}/addScore/tic_tac_toe?score=${num}&id=${id}`,
+        );  
     }
 
     makeAiTurn() {
@@ -78,6 +90,7 @@ export class GameEngine {
 
         if (this.turnCount >= this.limit) {
             this.win('Ничья', 'Вам начислено 5 очков');
+            this.addScore(5);
             return;
         }
     }

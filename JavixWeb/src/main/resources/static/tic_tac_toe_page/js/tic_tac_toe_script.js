@@ -9,7 +9,7 @@ document.addEventListener("click", (event) => {
         game = new GameEngine();
     }
 
-    if (event.target.className == "players-two-players") {
+    if (event.target.className == "button-two-players") {
         game = new GameEngineFriends();
     }
 
