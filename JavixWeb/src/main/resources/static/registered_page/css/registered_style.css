@@ -1,0 +1,123 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;600;700&display=swap");
+
+body {
+    background: #333;
+    color: #fff;
+    font-weight: 500;
+    font-family: "Roboto";
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    padding-inline: 10px;
+    max-width: 1200px;
+    margin: 0px auto;
+    height: 100%;
+    width: 100%;
+}
+
+/* HEADER BLOCK */
+header {
+    align-items: center;
+    border-bottom: 2px solid #fff;
+    display: flex;
+    justify-content: space-around;
+    padding: 20px 0px 10px;
+}
+
+    header h1 { font-size: 50px; }
+
+    .header__image { height: 50px; width: 50px; }
+
+    .header__image img { max-width: 100%; }
+
+/* CONTENT BLOCK */
+.content {
+    align-items: center;
+    display: flex;
+    flex: 1 0 auto;
+    flex-direction: column;
+    justify-content: center;
+}   
+
+    .content__image {
+        position: absolute; 
+        height: 20vmin; 
+        width: 20vmin;
+        z-index: -1;
+    }
+
+    .content__image img { max-width: 100%; }
+
+    .image-cubes {
+        animation: cubes_anim 2s; 
+        top: 10%;
+        left: 10%;
+        transform: rotate(-30deg);
+    }
+
+    .image-monitor {
+        animation: monitor_anim 2s;
+        top: 20%;
+        right: 10%;
+        transform: rotate(25deg);
+    }
+
+    .image-gamepad {
+        animation: gamepad_anim 2s; 
+        top: 60%;
+        left: 10%;   
+        transform: rotate(-25deg); 
+    }
+
+    .image-winner { 
+        animation: winner_anim 2s; 
+        top: 70%; 
+        left: 60%;
+    }
+
+    .content h1 {
+        font-size: 7vw;
+        font-weight: 600;
+        text-align: center;
+        margin: 0px 0px 20px;
+    }
+
+    .content p { font-size: 10vw; text-align: center; }
+
+    .content p:last-child { color: #37a4b2; margin: 10px 0px 0px; }
+
+/* ALL ANIMATIONS */
+@keyframes cubes_anim {
+    0% { transform: scale(0); opacity: 0;}
+    100% { transform: scale(1) rotate(-30deg); opacity: 5;}
+}
+
+@keyframes monitor_anim {
+    0% { transform: scale(0); opacity: 0;}
+    100% { transform: scale(1) rotate(25deg); opacity: 5;}
+}
+
+@keyframes gamepad_anim {
+    0% { transform: scale(0); opacity: 0;}
+    100% { transform: scale(1) rotate(-25deg); opacity: 5;}
+}
+
+@keyframes winner_anim {
+    0% { transform: scale(0); opacity: 0;}
+    100% { transform: scale(1); opacity: 5;}
+}
+
+
+/* FOOTER BLOCK */
+footer {
+    margin: 10px 0px 20px;
+    text-align: center;
+}
+
+@media (max-width: 520px) {
+    header { padding: 10px 0px 10px; }
+    header h1 { font-size: 10vw; }
+    .header__image { height: 10vw; width: 10vw; }
+}
