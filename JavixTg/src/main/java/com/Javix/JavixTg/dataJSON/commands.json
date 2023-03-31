@@ -1,0 +1,50 @@
+{
+  "startCommand" : {
+    "message" : "<b>Привет, рад тебя видеть \uD83D\uDC4B\n\nМеня зовут Javix Bot. Со мной ты можешь поиграть в различные игры, поболтать или просто хорошо провести время.\n/start - начать общение со мной\n/play - начать играть\n/help - если нужна помощь\n/stats - твоя статистика\n/profile - твой профиль\n/delete - удалить профиль</b>",
+    "sticker" : "CAACAgIAAxkBAAEIUp9kH0UggslRv2F6K6-FPc0Jaw_AvwACAQEAAladvQoivp8OuMLmNC8E",
+    "existent" : "",
+    "notExistent" : ""
+  },
+
+  "playCommand" : {
+    "message" : "<b>Давай играть\uD83D\uDD79</b>",
+    "sticker" : "CAACAgIAAxkBAAEIUqVkH0ZraboDNKCujT3xmXpfEhPQegACBQEAAladvQq35P22DkVfdy8E",
+    "existent" : "Здесь ты можешь выбрать во что поиграть.\nПока доступны лишь две игры, но в будущем их будет больше \uD83D\uDE09",
+    "notExistent" : "Для начала нужно зарегистрироваться."
+  },
+
+  "helpCommand" : {
+    "message" : "<b>Вот список доступных команд:\n/play - Играть (так же можно зарегистрироваться)\n/help - Помощь\n/stats - Посмотреть свою статистику\n/profile - Посмотреть свой профиль\n/delete - Удалить свой профиль</b>",
+    "sticker" : "CAACAgIAAxkBAAEIUqtkH0cVSOUihhmJ5YSjbv-sAbXKAwACTgIAAladvQow_mttgTIDby8E",
+    "existent" : "",
+    "notExistent" : ""
+  },
+
+  "statsCommand" : {
+    "message" : "Теперь о статистике\uD83D\uDCDD\n\n",
+    "sticker" : "CAACAgIAAxkBAAEIUrNkH0dhSh00mTFrde1fMyyl8p-chwACCwEAAladvQpOseemCPvtSS8E",
+    "existent" : "",
+    "notExistent" : "Для того, чтобы посмотреть статистику нужно зарегистрироваться."
+  },
+
+  "profileCommand" : {
+    "message" : "",
+    "sticker" : "CAACAgIAAxkBAAEIUrNkH0dhSh00mTFrde1fMyyl8p-chwACCwEAAladvQpOseemCPvtSS8E",
+    "existent" : "",
+    "notExistent" : "<b>Пока у тебя нет профиля \uD83D\uDE15\nДля того, чтобы его создать, нужно зарегистрироваться по команде /play.</b>"
+  },
+
+  "deleteCommand" : {
+    "message" : "<b>Ваш профиль был успешно удалён</b>",
+    "sticker" : "CAACAgIAAxkBAAEIW4FkI0COiXoMWnPoNXTO-BpKSzBxAwACSQIAAladvQoqlwydCFMhDi8E",
+    "existent" : "Вы действительно хотите удалить данные?\nВся ваша статистика пропадёт и для дальнейших игр вам придётся снова регистрироваться.",
+    "notExistent" : "У тебя и так нет профиля \uD83D\uDE15 \nДля того, чтобы его создать, нужно зарегистрироваться.\n<b>Пиши /play</b>"
+  },
+
+  "anyContentType" : {
+    "message" : "<b>Я не понимаю тебя \uD83D\uDC7B</b>",
+    "sticker" : "CAACAgIAAxkBAAEIM3VkF2iQ_1-NOTDR-19LQayf-AABQU4AAgIBAAJWnb0KTuJsgctA5P8vBA",
+    "existent" : "",
+    "notExistent" : ""
+  }
+}
