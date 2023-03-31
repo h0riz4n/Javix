@@ -16,7 +16,7 @@ public class BotConfig {
     public BotConfig() {
         botUserName = System.getenv("USER_NAME");
         botToken = System.getenv("TOKEN");
-        webHookPath = "https://d0f7-5-3-213-252.eu.ngrok.io";
+        webHookPath = "https://3810-5-3-213-252.eu.ngrok.io";
     }
 
     public void setWebHook() {

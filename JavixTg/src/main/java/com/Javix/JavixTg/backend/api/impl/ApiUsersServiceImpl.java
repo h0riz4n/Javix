@@ -22,7 +22,7 @@ import java.util.List;
 @Service
 public class ApiUsersServiceImpl implements ApiUsersService {
 
-    private String URL = "https://5f71-5-3-213-252.eu.ngrok.io";
+    private String URL = "https://76af-5-3-213-252.eu.ngrok.io";
     @Autowired
     private HttpClientJavix httpClientJavix;
 

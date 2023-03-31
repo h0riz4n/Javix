@@ -1,7 +1,7 @@
 import { Grid } from "./grid.js";
 import { Tile } from "./tile.js";
 
-const mainURI = "";
+const mainURI = "https://76af-5-3-213-252.eu.ngrok.io/api/score";
 
 const gameBoard = document.getElementById("game-board");
 

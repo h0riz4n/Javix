@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+    <head>
+        <!-- Page encoding -->
+        <meta charset="UTF-8">
+        <!-- Page title -->
+        <title>Javix Bot: Error</title>
+        <!-- Adaptive -->
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0, minimum-scale=1.0, viewport-fit=cover">
+        <!-- Connecting CSS -->
+        <link rel="stylesheet" th:href="@{/error_page/css/reset_style.css}">
+        <link rel="stylesheet" th:href="@{/error_page/css/error_style.css}">
+        <!-- Connecting the site icon -->
+        <link rel="icon" th:href="@{/images/site-icons/favicon.ico}">
+        <link rel="icon" type="image/png" sizes="32x32" th:href="@{/images/site-icons/favicon-32x32.png}">
+        <link rel="icon" type="image/png" sizes="16x16" th:href="@{/images/site-icons/favicon-16x16.png}">
+        <!-- Connecting site icons on mobile phones and in modern browsers -->
+        <link rel="apple-touch-icon" sizes="180x180" th:href="@{/images/site-icons/apple-touch-icon.png}">
+        <link rel="manifest" th:href="@{/images/site-icons/site.webmanifest}">
+        <!-- Connecting site icon in web application -->
+        <link rel="mask-icon" th:href="@{/images/site-icons/safari-pinned-tab.svg}" color="#5bbad5">
+        <!-- Connecting Telegram WebApp -->
+        <script src="https://telegram.org/js/telegram-web-app.js"></script>
+        <!-- Connecting JavaScript -->
+        <script th:src="@{/error_page/js/tg_script.js}"></script>
+    </head>
+    <body>
+        <section class="container">
+            <header>
+                <div class="header__image">
+                    <img th:src="@{/images/icons/logo.png}" alt="Логотип телеграм-бота «Javix Bot»">
+                </div>
+                <div class="header__image">
+                    <img class="header__cancel-icon" th:src="@{/images/icons/cancel-icon.png}" alt="">
+                </div>
+            </header>
+            <section class="content">
+                <h2 class="content__numbers" data-text="404">404</h2>
+                <p class="content__text">Oops... Page not found</p>
+            </section>
+            <footer>© Javix Bot</footer>
+        </section>
+    </body>
+</html>

@@ -1,0 +1,116 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;600;700&display=swap");
+
+body {
+    background: #333;
+    color: #fff;
+    font-family: "Roboto";
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    padding-inline: 10px;
+    margin: 0px auto;
+    max-width: 1200px;
+    height: 100%;
+    width: 100%;   
+}
+
+/* HEADER BLOCK */
+header {
+    border-bottom: 1px solid #fff; 
+    display: flex;
+    justify-content: space-around;
+    padding: 10px 0px;
+    top: 0px;
+    width: 100%;
+}
+
+    .header__image { 
+        width: 10vw; 
+        height: 10vw; 
+    }
+    
+    .header__image img { max-width: 100%; }
+
+/* CONTENT BLOCK */
+.content {
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+    flex: 1 0 auto;
+    text-align: center;
+}
+
+    .content__numbers {
+        color: #000;
+        font-size: 10vw;
+        position: relative;
+    }
+
+    .content__numbers::before, 
+    .content__numbers::after {
+        content: attr(data-text);
+        top: 0;
+        left: 0;
+        height: 100%;
+        position: absolute;
+        width: 100%;
+        z-index: -10; 
+    }
+
+    .content__numbers::before {
+        color: #ee1b52;
+        animation: glitch 1s infinite;
+    }
+
+    .content__numbers::after {
+        color: #69c9d0;
+        animation: glitch 2s infinite;
+    }
+
+    .content__text {
+        font-size: 5vmin;
+        text-shadow: 1px 1px 10px rgb(0, 0, 0); 
+    }
+
+
+/* FOOTER BLOCK */
+footer {
+    margin: 10px 0px 20px;
+    text-align: center;
+}
+  
+/* ALL ANIMATIONS */
+@keyframes glitch {
+    0% {
+        top: -3px;
+        left: -3px;
+    }
+    25% {
+        top: 0px;
+        left: -3px;
+    }
+    50% {
+        top: 3px;
+        left: 3px;
+    }
+    75% {
+        top: 0px;
+        left: 3px;
+    }
+    100% {
+        top: -3px;
+        left: -3px;
+    }
+}
+
+@media (min-width: 767px) {
+    .header__image { height: 50px; width: 50px; }
+    .content__numbers { font-size: 250px; }
+    .content__text { font-size: 40px; }
+}
+
+@media(min-width: 520px) {
+    .container { padding-inline: 20px; }
+}

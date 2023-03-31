@@ -4,7 +4,7 @@ const resetBtn = document.getElementById('reload');
 export const aiPlayer = 'O'; 
 export const huPlayer = 'X';
 
-const mainURI = "";
+const mainURI = "https://76af-5-3-213-252.eu.ngrok.io/api/score";
 
 export class GameEngine {
 

@@ -32,7 +32,7 @@ public class GameServiceImpl implements GameService {
 
     @Override
     public boolean addScoreNumbers(long id, int score) {
-        if (ticTacToeRepo.existsByTgId(id)) {
+        if (numbersRepo.existsByTgId(id)) {
             Numbers numbers = numbersRepo.getByTgId(id);
             if (numbers.getScore() < score) {
                 numbersRepo.setScoreFor(score, id);
