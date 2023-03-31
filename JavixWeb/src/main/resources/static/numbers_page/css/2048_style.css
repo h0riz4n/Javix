@@ -80,13 +80,15 @@ html, body {
     .game-over__text { color: var(--basic-white); font-size: 20px; }
 
     .game-over__button {
+        border-radius: 10px;
+        background: var(--button-color);
         color: var(--basic-white);
         font-size: 20px;
         padding-block: 10px;
         padding-inline: 30px;
         margin: 15px 0px 0px;
-        border-radius: 10px;
-        background: var(--button-color);
+        height: 40px;
+        width: 200px;
     }
 
     .hide { opacity: 0; pointer-events: none; }
