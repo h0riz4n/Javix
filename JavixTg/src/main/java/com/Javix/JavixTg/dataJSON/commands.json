@@ -1,6 +1,6 @@
 {
   "startCommand" : {
-    "message" : "<b>Привет, рад тебя видеть \uD83D\uDC4B\n\nМеня зовут Javix Bot. Со мной ты можешь поиграть в различные игры, поболтать или просто хорошо провести время.\n/start - начать общение со мной\n/play - начать играть\n/help - если нужна помощь\n/stats - твоя статистика\n/profile - твой профиль\n/delete - удалить профиль</b>",
+    "message" : "<b>Привет, рад тебя видеть \uD83D\uDC4B\n\nМеня зовут Javix Bot. Со мной ты можешь поиграть в различные игры, поболтать или просто хорошо провести время.\n\n/start - запустить меня\n/play - начать играть\n/help - если нужна помощь\n/stats - твоя статистика\n/profile - твой профиль\n/delete - удалить профиль</b>",
     "sticker" : "CAACAgIAAxkBAAEIUp9kH0UggslRv2F6K6-FPc0Jaw_AvwACAQEAAladvQoivp8OuMLmNC8E",
     "existent" : "",
     "notExistent" : ""
@@ -14,7 +14,7 @@
   },
 
   "helpCommand" : {
-    "message" : "<b>Вот список доступных команд:\n/play - Играть (так же можно зарегистрироваться)\n/help - Помощь\n/stats - Посмотреть свою статистику\n/profile - Посмотреть свой профиль\n/delete - Удалить свой профиль</b>",
+    "message" : "<b>Вот список доступных команд:\n\n/play - Играть\n/help - Помощь\n/stats - Мои рекорды\n/profile - Профиль\n/delete - Удалить профиль</b>",
     "sticker" : "CAACAgIAAxkBAAEIUqtkH0cVSOUihhmJ5YSjbv-sAbXKAwACTgIAAladvQow_mttgTIDby8E",
     "existent" : "",
     "notExistent" : ""
@@ -29,7 +29,7 @@
 
   "profileCommand" : {
     "message" : "",
-    "sticker" : "CAACAgIAAxkBAAEIUrNkH0dhSh00mTFrde1fMyyl8p-chwACCwEAAladvQpOseemCPvtSS8E",
+    "sticker" : "CAACAgIAAxkBAAEIZsVkJw2vcn9HWyNoflz69HabB-B8mwACSAIAAladvQoc9XL43CkU0C8E",
     "existent" : "",
     "notExistent" : "<b>Пока у тебя нет профиля \uD83D\uDE15\nДля того, чтобы его создать, нужно зарегистрироваться по команде /play.</b>"
   },

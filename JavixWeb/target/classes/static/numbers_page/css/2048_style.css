@@ -58,11 +58,10 @@ html, body {
     border-radius: 10px;
     display: flex;
     flex-direction: column;
-    gap: 15px;
     justify-content: center;
     top: 50%;
     left: 50%;
-    position: absolute;
+    position: fixed;
     margin-top: -75px;
     margin-left: -150px;
     transition: opacity .5s;
@@ -74,18 +73,22 @@ html, body {
     .game-over__title {
         color: var(--button-color);
         font-size: 30px;
+        margin: 0px 0px 10px;
         text-shadow: 1px 1px 1px var(--button-color);
     }
 
     .game-over__text { color: var(--basic-white); font-size: 20px; }
 
     .game-over__button {
+        border-radius: 10px;
+        background: var(--button-color);
         color: var(--basic-white);
         font-size: 20px;
         padding-block: 10px;
         padding-inline: 30px;
-        border-radius: 10px;
-        background: var(--button-color);
+        margin: 15px 0px 0px;
+        height: 40px;
+        width: 200px;
     }
 
     .hide { opacity: 0; pointer-events: none; }
