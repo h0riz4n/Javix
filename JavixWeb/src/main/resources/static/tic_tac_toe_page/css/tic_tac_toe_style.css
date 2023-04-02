@@ -31,8 +31,6 @@ body {
     position: relative;
     max-width: 1200px;
     margin: 0px auto;
-    height: 100%;
-    width: 100%;
 }
 
 /* HEADER BLOCK */
@@ -40,45 +38,17 @@ header {
     border-bottom: 1px solid var(--basic-white); 
     display: flex;
     justify-content: space-around;
-    padding: 10px 0px;
-    top: 0px;
-    width: 100%;
+    padding: 2vmin;
+    width: 80vmin;
 }
 
     header h1 {
-        font-size: 50px;
+        font-size: 6vmin;
     }
 
-    .header__image { width: 50px; height: 50px; }
+    .header__image { width: 6vmin; height: 6vmin; }
     
     .header__image img { max-width: 100%; }
-
-/* CONTENT BLOCK */
-.content {
-    display: flex;
-    flex: 1 0 auto;
-    flex-direction: column;
-}
-
-/* BUTTONS SECTION */
-.buttons {
-    display: flex;
-    flex-direction: column;
-    margin: 0px 0px 25px;
-}
-
-    .buttons button {
-        background: var(--button-color);
-        border-radius: 50px;
-        color: var(--basic-white);
-        font-size: 20px;
-        font-weight: 500;
-        padding: 10px;
-        margin: 20px 0px 0px;
-        height: 50px;
-    }
-
-    .buttons button:first-child { margin: 0px; }
 
 #game {
     display: grid;
@@ -147,6 +117,24 @@ header {
     background: var(--back-color);
 }
 
+/* BUTTONS SECTION */
+.buttons {
+    display: flex;
+    flex-direction: column;
+}
+
+    .buttons button {
+        background: var(--button-color);
+        border-radius: 50px;
+        color: var(--basic-white);
+        font-size: 20px;
+        font-weight: 500;
+        padding: 10px;
+        margin: 20px 0px 0px;
+        height: 50px;
+        width: 200px;
+    }
+
 /* GAME OVER SECTION */
 .game-over {
     align-items: center;
@@ -183,23 +171,24 @@ header {
         font-size: 20px;
         margin: 15px 0px 0px;
         height: 40px;
-        width: 200px;
+        width: 200px; 
     }
 
     .hide { opacity: 0; pointer-events: none; }
 
-/* FOOTER BLOCK */
-footer {
-    margin: 10px 0px 20px;
-    text-align: center;
-}
-
-@media (max-width: 767px) {
-    header { padding: 10px 0px 10px; }
-    header h1 { font-size: 6vw; }
-    .header__image { height: 6vw; width: 6vw; }
-}
-
 @media (max-width: 520px) {
-    .buttons button { font-size: 5vw; }
+    .buttons button { font-size: 5vmin; }
+}
+
+@media (orientation: landscape) {
+    .buttons {
+        flex-direction: row;
+        justify-content: center;
+    }
+    .buttons button {
+        margin: 0px;
+    }
+    .buttons button:first-child {
+        margin: 0px 20px 0px 0px;
+    }
 }
