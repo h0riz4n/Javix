@@ -13,7 +13,7 @@ public class GsonParserServiceImpl implements GsonParserService {
     @Override
     public CommandModel parse() {
         Gson gson = new Gson();
-        try (FileReader reader = new FileReader("./src/main/java/com/Javix/JavixTg/dataJSON/commands.json")) {
+        try (FileReader reader = new FileReader("./commands.json")) {
             CommandModel sticker = gson.fromJson(reader, CommandModel.class);
             return sticker;
         } catch (Exception e) {

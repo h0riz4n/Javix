@@ -55,7 +55,7 @@ public class CallbackQueryServiceImpl implements CallbackQueryService {
         AnswerCallbackQuery answerCallbackQuery = new AnswerCallbackQuery();
 
         answerCallbackQuery.setCallbackQueryId(update.getCallbackQuery().getId());
-        answerCallbackQuery.setUrl(apiUsersService.getURL() + "/" + game + "?id="+chatID);
+        answerCallbackQuery.setUrl("https://javixwebapp.ru/" + game + "?id="+chatID);
 
         try {
             bot.executeAsync(answerCallbackQuery);

@@ -134,7 +134,7 @@ public class MessageHandlerServiceImpl implements MessageHandlerService {
             sendMessage.setText(sample.getNotExistent());
             gameBoard = keyboardService
                     .webAppBoard(
-                            apiUsersService.getURL(),
+                            "https://javixwebapp.ru",
                             "Javix",
                             chatID
                     );

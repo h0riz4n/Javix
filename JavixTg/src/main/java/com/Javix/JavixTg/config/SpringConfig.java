@@ -1,7 +1,6 @@
 package com.Javix.JavixTg.config;
 
 import com.Javix.JavixTg.backend.HttpClientJavix;
-import com.Javix.JavixTg.botApi.TelegramBot;
 import com.Javix.JavixTg.modelsJSON.CommandModel;
 import com.Javix.JavixTg.service.GsonParserService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -17,12 +16,13 @@ public class SpringConfig implements WebMvcConfigurer {
 
     private final ApplicationContext applicationContext;
 
-    @Autowired
     private GsonParserService gsonParserService;
 
     @Autowired
-    public SpringConfig(ApplicationContext applicationContext) {
+    public SpringConfig(ApplicationContext applicationContext,
+                        GsonParserService gsonParserService) {
         this.applicationContext = applicationContext;
+        this.gsonParserService = gsonParserService;
     }
 
     @Bean
@@ -30,22 +30,6 @@ public class SpringConfig implements WebMvcConfigurer {
         CommandModel commandModel = new CommandModel();
         commandModel = gsonParserService.parse();
         return commandModel;
-    }
-
-    @Bean
-    public BotConfig initTgConfig() {
-        BotConfig botConfig = new BotConfig();
-        botConfig.setWebHook();
-        return botConfig;
-    }
-
-    @Bean
-    public TelegramBot telegramBot(BotConfig botConfig) {
-        TelegramBot telegramBot = new TelegramBot();
-        telegramBot.setBotUserName(botConfig.getBotUserName());
-        telegramBot.setBotToken(botConfig.getBotToken());
-        telegramBot.setWebHookPath(botConfig.getWebHookPath());
-        return telegramBot;
     }
 
     @Bean
