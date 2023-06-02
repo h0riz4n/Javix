@@ -1,0 +1,43 @@
+version: '3'
+
+services:
+  nginx-proxy:
+    build: .
+    container_name: "nginx-proxy-root"
+    ports:
+      - "80:80"
+      - "443:443"
+    volumes:
+      - /var/run/docker.sock:/tmp/docker.sock:ro
+      - /mnt/drive1/certs:/etc/nginx/certs
+      - vhostd:/etc/nginx/vhost.d
+      - html:/usr/share/nginx/html
+    restart: always
+    networks:
+      - host_env
+
+  acme-companion:
+    container_name: "nginx-acme-companion"
+    image: nginxproxy/acme-companion:2.1.0
+    volumes:
+      - /mnt/drive1/certs:/etc/nginx/certs
+      - vhostd:/etc/nginx/vhost.d
+      - html:/usr/share/nginx/html
+      - acme:/etc/acme.sh
+      - /var/run/docker.sock:/var/run/docker.sock:ro
+    environment:
+      - NGINX_PROXY_CONTAINER=nginx-proxy-root
+      - DEFAULT_EMAIL=DreaMaNG2toPlay@yandex.ru
+    depends_on:
+      - nginx-proxy
+    privileged: true
+    restart: always
+
+volumes:
+  vhostd:
+  html:
+  acme:
+
+networks:
+  host_env:
+    external: true
