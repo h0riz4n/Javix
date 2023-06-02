@@ -52,8 +52,8 @@ docker-compose up -d
 - Spring Framework
 
 # Student developers
-[Frontend dev. student - Misha Chernov](https://github.com/Mid1i/Mid1i)
-[Backend dev. student - Rustam Khudoyan](https://github.com/h0riz4n)
+- [Frontend dev. student - Misha Chernov](https://github.com/Mid1i/Mid1i)
+- [Backend dev. student - Rustam Khudoyan](https://github.com/h0riz4n)
 
 # F.A.Q.
 - [Initial Server Setup with Ubuntu 18.04](https://www.digitalocean.com/community/tutorials/initial-server-setup-with-ubuntu-18-04)
