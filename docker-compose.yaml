@@ -1,0 +1,48 @@
+version: "3"
+services:
+  postgres:
+    image: 'postgres:alpine'
+    container_name: postgres
+    environment:
+      - 'POSTGRES_DB=Javix'
+      - 'POSTGRES_USER=postgres'
+      - 'POSTGRES_PASSWORD=2003'
+    networks:
+      - host_env
+    volumes:
+      - database:/var/lib/postgresql/data
+
+  webapp:
+    build: ./javixwebapp
+    container_name: webapp
+    environment:
+      - VIRTUAL_HOST=javixwebapp.ru
+      - VIRTUAL_PORT=7772
+      - LETSENCRYPT_HOST=javixwebapp.ru
+    ports:
+      - "7772:7772"
+    expose:
+      - 7772
+    networks:
+      - host_env
+    depends_on:
+      - postgres
+
+  telegram-bot:
+    build: ./javixbot
+    container_name: telegram-bot
+    ports:
+      - "7771:7771"
+    expose:
+      - 7771
+    networks:
+      - host_env
+    depends_on:
+      - postgres
+
+volumes:
+  database:
+
+networks:
+  host_env:
+    external: true
