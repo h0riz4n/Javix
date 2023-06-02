@@ -14,6 +14,7 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import lombok.NonNull;
 
+import java.util.HashMap;
 import java.util.Map;
 
 @RestController
@@ -51,10 +52,13 @@ public class ApiUsersController {
     }
 
     @GetMapping("/isUser")
-    public ResponseEntity<HttpStatus> isUser(@RequestParam(value = "id", defaultValue = "0") @NonNull long id) {
+    public ResponseEntity<Map> isUser(@RequestParam(value = "id", defaultValue = "0") @NonNull long id) {
+        HashMap<String, Boolean> map = new HashMap<>(2);
         if (playerRepo.existsByTgId(id)) {
-            return new ResponseEntity<>(HttpStatus.OK);
+            map.put("user_state", true);
+            return new ResponseEntity<>(map, HttpStatus.OK);
         }
-        return new ResponseEntity<>(HttpStatus.BAD_REQUEST);
+        map.put("user_state", false);
+        return new ResponseEntity<>(map, HttpStatus.OK);
     }
 }
