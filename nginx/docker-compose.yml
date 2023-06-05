@@ -9,7 +9,7 @@ services:
       - "443:443"
     volumes:
       - /var/run/docker.sock:/tmp/docker.sock:ro
-      - /mnt/drive1/certs:/etc/nginx/certs
+      - /certs:/etc/nginx/certs
       - vhostd:/etc/nginx/vhost.d
       - html:/usr/share/nginx/html
     restart: always
@@ -20,7 +20,7 @@ services:
     container_name: "nginx-acme-companion"
     image: nginxproxy/acme-companion:2.1.0
     volumes:
-      - /mnt/drive1/certs:/etc/nginx/certs
+      - /certs:/etc/nginx/certs
       - vhostd:/etc/nginx/vhost.d
       - html:/usr/share/nginx/html
       - acme:/etc/acme.sh
